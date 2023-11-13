@@ -23,6 +23,10 @@ jobs:
 
     - name: Build C files
       run: |
-        gcc -o main src/DSA_C.c
+        gcc -o main src/DSA_C.c \
+                    src/LinkedList.c \
+                    src/Queue.c \
+                    src/Stack.c \
+                    -Iinclude
         .main
       working-directory: ${{ github.workspace }}
