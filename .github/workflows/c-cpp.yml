@@ -1,0 +1,28 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+   build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up GCC
+      run: |
+        sudo apt-get -y install gcc
+        gcc --version
+        mkdir -p build
+      shell: bash
+
+    - name: Build C files
+      run: |
+        gcc -o build/my_program main.c
+        ./build/my_program
+      working-directory: ${{ github.workspace }}
