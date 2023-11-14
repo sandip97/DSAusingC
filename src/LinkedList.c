@@ -194,7 +194,7 @@ struct Node* DeleteNode(struct Node *p, int pos){
 	}
 }
 int isSorted(struct Node *p){
-	int x=INT_MIN;
+	int x=(-2147483647 - 1);
 	while(p!=NULL){
 		if(p->data<x)
 			return 0;
