@@ -61,7 +61,7 @@ int isFull(struct Stack *st){
 	return st->Top==st->size-1;
 }
 int stackTop(struct Stack *st){
-	if(isEmpty(&st)){
+	if(isEmpty(st)){
 		printf("Empty stack\n");
 		return 0;
 	}
