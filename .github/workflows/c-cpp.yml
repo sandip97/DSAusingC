@@ -28,5 +28,5 @@ jobs:
                     src/Queue.c \
                     src/Stack.c \
                     -Iinclude
-        .main
+        ./main
       working-directory: ${{ github.workspace }}
